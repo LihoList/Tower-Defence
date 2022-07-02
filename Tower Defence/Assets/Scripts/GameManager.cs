@@ -4,8 +4,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public GameObject completeLevelUI;
 
     public static bool isGameOver;
+
+    public int levelAmount = 1;
 
     private void Start()
     {
@@ -32,5 +35,11 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         gameOverUI.SetActive(true);
+    }
+
+    public void WinLevel()
+    {
+        isGameOver = true;
+        completeLevelUI.SetActive(true);
     }
 }
