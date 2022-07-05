@@ -14,7 +14,7 @@ public class WaveManager : MonoBehaviour
 
     public float timeBetweenWaves = 5.5f;
     public float countdoun = 2f;
-    int waveNumber = 0;
+    public int waveNumber = 0;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class WaveManager : MonoBehaviour
             gameManager.WinLevel();
             this.enabled = false;
         }
-
+         
         if (countdoun <= 0)
         {
             StartCoroutine(SpawnWave());
@@ -48,7 +48,7 @@ public class WaveManager : MonoBehaviour
 
     }
 
-    IEnumerator SpawnWave()
+    public IEnumerator SpawnWave()
     {
         PlayerStats.rounds++;
 

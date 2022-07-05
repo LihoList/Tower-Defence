@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3111e4d32eea3d4caa5e101d31616e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  explosionRadius: 5
   bulletEffetPrefab: {fileID: 4397880871071970921, guid: af23ccff59305394db66123b3af1a386, type: 3}
+  speed: 30
+  damage: 20
+  explosionRadius: 6

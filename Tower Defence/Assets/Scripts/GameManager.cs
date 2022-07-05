@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
+        Invoke("WinWithDelay", 3);
+    }
+
+    void WinWithDelay()
+    {
         isGameOver = true;
         completeLevelUI.SetActive(true);
     }

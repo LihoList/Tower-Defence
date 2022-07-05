@@ -6,6 +6,8 @@ public class EnemyMove : MonoBehaviour
     Transform target;
     int waypointIndex = 0;
 
+    public float turnSpeed = 10f;
+
     Enemy enemyScript;
 
     private void Start()
@@ -26,6 +28,8 @@ public class EnemyMove : MonoBehaviour
         }
 
         enemyScript.speed = enemyScript.startSpeed;
+
+        LockOnTarget();
 
     }
 
@@ -48,5 +52,13 @@ public class EnemyMove : MonoBehaviour
         Destroy(gameObject);
 
         WaveManager.enemiesAlive--;
+    }
+
+    void LockOnTarget()
+    {
+        Vector3 direction = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 }

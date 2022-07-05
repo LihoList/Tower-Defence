@@ -51,7 +51,7 @@ MonoBehaviour:
   partToRotate: {fileID: 6990657965105825442}
   turnSpeed: 10
   bulletPrefab: {fileID: 2369182338865594299, guid: fdd736437abfe5e46a83adfbc466158a, type: 3}
-  fireRate: 0.5
+  fireRate: 1.5
   useLaser: 0
   lineRenderer: {fileID: 0}
   laserEffect: {fileID: 0}

@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletEffetPrefab: {fileID: 4397880871071970921, guid: af23ccff59305394db66123b3af1a386, type: 3}
-  speed: 25
-  damage: 80
-  explosionRadius: 5
+  speed: 40
+  damage: 40
+  explosionRadius: 7
 --- !u!1 &6538718724821082129
 GameObject:
   m_ObjectHideFlags: 0

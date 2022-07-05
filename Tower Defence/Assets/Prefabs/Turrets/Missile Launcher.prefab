@@ -81,9 +81,14 @@ MonoBehaviour:
   enemyTag: Enemy
   partToRotate: {fileID: 4836605521362704755}
   turnSpeed: 10
-  fireRate: 0.25
-  bulletSpawnPoint: {fileID: 2366255572352816283}
   bulletPrefab: {fileID: 6745823743576350687, guid: 50794154371117f4ea96a7ed42b62e68, type: 3}
+  fireRate: 0.1
+  useLaser: 0
+  lineRenderer: {fileID: 0}
+  laserEffect: {fileID: 0}
+  slowFactor: 0.5
+  damageOverTime: 30
+  bulletSpawnPoint: {fileID: 2366255572352816283}
 --- !u!1 &4224456269288936892
 GameObject:
   m_ObjectHideFlags: 0

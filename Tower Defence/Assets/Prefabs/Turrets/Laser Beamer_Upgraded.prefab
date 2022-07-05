@@ -9894,7 +9894,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 7206121454641164232}
   laserEffect: {fileID: 5368440953378995270}
   slowFactor: 0.4
-  damageOverTime: 60
+  damageOverTime: 50
   bulletSpawnPoint: {fileID: 2754352505494596062}
 --- !u!120 &7206121454641164232
 LineRenderer:

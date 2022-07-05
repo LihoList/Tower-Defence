@@ -6,5 +6,5 @@ public class Wave
 {
     public GameObject enemy;
     public int count;
-    public int rate;
+    public float rate;
 }
