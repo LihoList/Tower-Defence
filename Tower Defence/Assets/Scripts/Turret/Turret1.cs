@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Turret1 : MonoBehaviour
@@ -137,6 +136,13 @@ public class Turret1 : MonoBehaviour
             bulletScript.Seek(target);
         }
     }
+
+
+
+
+
+
+
 
     private void OnDrawGizmosSelected()
     {

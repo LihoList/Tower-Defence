@@ -8,6 +8,13 @@ public class LevelWon : MonoBehaviour
 
     public GameManager gameManager;
 
+    private void OnEnable()
+    {
+        PlayerPrefs.SetInt("levelReached", nextLevelNumber);
+
+        Debug.Log("New level unclocked");
+    }
+
     public void MenuButtonClick()
     {
         screenFader.FadeTo(1);
@@ -22,7 +29,7 @@ public class LevelWon : MonoBehaviour
         else
         {
             screenFader.FadeTo(nextLevelNumber + 1);
-            PlayerPrefs.SetInt("levelReached", nextLevelNumber);
+            
         }
 
         

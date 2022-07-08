@@ -5,7 +5,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance; //making a build manager visible to make references from other scripts
 
-    TurretBlueprint turretToBuild;
+    [HideInInspector] public TurretBlueprint turretToBuild;
     Node selectedNode;
 
     public NodeUI nodeUI;

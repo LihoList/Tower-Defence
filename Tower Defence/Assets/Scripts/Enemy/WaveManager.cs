@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
+
+
     public static int enemiesAlive;
     public Wave[] waves;
 
@@ -16,6 +18,7 @@ public class WaveManager : MonoBehaviour
     public float countdoun = 2f;
     public int waveNumber = 0;
 
+
     private void Start()
     {
         enemiesAlive = 0;
@@ -23,6 +26,11 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
+        if (gameManager.canPlay == false)
+        {
+            return;
+        }
+
         if(enemiesAlive > 0)
         {
             return;

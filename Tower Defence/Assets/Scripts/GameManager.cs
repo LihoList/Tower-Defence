@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Tutorial")]
+    public GameObject tutorial;
+    public int firstTime;
+    public bool canPlay = false;
+
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
@@ -13,6 +18,26 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isGameOver = false;
+
+        FirstLaunch();
+
+    }
+
+    void FirstLaunch()
+    {
+        firstTime = PlayerPrefs.GetInt("firstTime", 1);
+        if (firstTime == 0)
+        {
+            canPlay = true;
+            return;
+        }
+        else
+        {
+            canPlay = false;
+            tutorial.SetActive(true);
+
+        }
+
     }
 
     private void Update()
