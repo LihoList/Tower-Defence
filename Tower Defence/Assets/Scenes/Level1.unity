@@ -10181,7 +10181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101327946561119279, guid: fb6f639e068750143b2771b1720a8e2d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1101327946561119279, guid: fb6f639e068750143b2771b1720a8e2d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -42210,7 +42210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4918615623361133833, guid: c040ab9b6f143dc419e9278a27bcad9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.788277
+      value: 37.418
       objectReference: {fileID: 0}
     - target: {fileID: 4918615623361133833, guid: c040ab9b6f143dc419e9278a27bcad9b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42218,7 +42218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4918615623361133833, guid: c040ab9b6f143dc419e9278a27bcad9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -152.35912
+      value: -152.352
       objectReference: {fileID: 0}
     - target: {fileID: 4918615623361133833, guid: c040ab9b6f143dc419e9278a27bcad9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44114,7 +44114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 8809296280283832771, guid: 6d6dd266969ffe74694cd42185f75f82, type: 3}
+  - enemy: {fileID: 8018505283598371073, guid: 3ed13711015656b47ac0262286f4224c, type: 3}
     count: 15
     rate: 1
   - enemy: {fileID: 8809296280283832771, guid: 6d6dd266969ffe74694cd42185f75f82, type: 3}
