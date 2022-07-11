@@ -9885,7 +9885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  enemyTag: Enemy
+  enemyTag_Ground: Enemy
+  enemyTag_Flying: None
   partToRotate: {fileID: 1918535835626429546}
   turnSpeed: 10
   bulletPrefab: {fileID: 0}

@@ -28,6 +28,11 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        turretToBuild = null;
+    }
+
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;

@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Snow
+  - Flying
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Snow
   - Water
   - UI
   - Environment

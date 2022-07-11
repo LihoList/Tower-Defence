@@ -24,4 +24,9 @@ public class LevelSelector : MonoBehaviour
     {
         screenFader.FadeTo(levelIndex + 1);
     }
+
+    public void BackButtonClick()
+    {
+        screenFader.FadeTo(0);
+    }
 } 

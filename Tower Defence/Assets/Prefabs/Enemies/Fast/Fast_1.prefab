@@ -400,9 +400,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 20
   speed: 0
-  startHealth: 70
+  startHealth: 150
   health: 0
-  moneyGain: 10
+  moneyGain: 8
   healthBar: {fileID: 5700206525064680194}
   deathEffect1: {fileID: 5472670652646151998, guid: ebcdc145452fdd6409e85ec7afe040b2, type: 3}
 --- !u!114 &3518998531807717101

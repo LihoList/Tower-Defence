@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Tutorial")]
+    [Header("Tutorial (only for the first level")]
     public GameObject tutorial;
     public int firstTime;
     public bool canPlay = false;
@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
 
-        FirstLaunch();
+        if (tutorial != null)
+            FirstLaunch();
 
     }
 

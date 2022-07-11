@@ -8,7 +8,8 @@ public class Turret1 : MonoBehaviour
 
     public float range = 15f;
 
-    public string enemyTag = "Enemy";
+    public string enemyTag_Ground = "Enemy";
+    public string enemyTag_Flying = "Flying";
     public Transform partToRotate;
     public float turnSpeed = 10f;
 
@@ -23,20 +24,39 @@ public class Turret1 : MonoBehaviour
     public ParticleSystem laserEffect;
     public float slowFactor = 0.5f;
     public int damageOverTime = 30;
-    
+
 
     public Transform bulletSpawnPoint;
+
+    TurretSound turretSoundScript;
     
 
 
     private void Start()
     {
+        turretSoundScript = GetComponent<TurretSound>();
+
         InvokeRepeating("UpdateTarget", 0, 0.5f); //update target every 0.5 sec
     }
 
     void UpdateTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag_Ground); // array of ground targets
+        int groundEnemyCount_origin = enemies.Length;
+
+        if(enemyTag_Flying != "None") // if turret attaks flying enemies
+        {
+            GameObject[] flyingEnemies = GameObject.FindGameObjectsWithTag(enemyTag_Flying);// array of flying targets
+            int flyingCount = flyingEnemies.Length;
+            int k = 0; //for adding elements to enemies array 
+            System.Array.Resize(ref enemies, enemies.Length + flyingCount); //extending enemies array
+            for (int i = groundEnemyCount_origin; i < enemies.Length; i++) // adding flying enemeies to enemies array
+            {
+                enemies[i] = flyingEnemies[k];
+                k++;
+            }
+        }
+
         float shortestDistamce = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
@@ -105,6 +125,7 @@ public class Turret1 : MonoBehaviour
 
     void Laser()
     {
+        
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
         targetEnemy.Slow(slowFactor);
 
@@ -128,6 +149,8 @@ public class Turret1 : MonoBehaviour
 
     void Shoot()
     {
+        turretSoundScript.PlaySound();
+
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Bullet bulletScript = bulletGO.GetComponent<Bullet>();
         
